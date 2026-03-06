@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* ── Base ──────────────────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Glassmorphism card ────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Navbar glass ─────────────────────────────────────────────────── */
+.glass-nav {
+  background: rgba(10, 14, 26, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Gradient text ─────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Gradient button ──────────────────────────────────────────────── */
+.gradient-btn {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1, #06b6d4);
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+}
+.gradient-btn:hover {
+  background-position: 100% 0;
+  box-shadow: 0 4px 24px rgba(139, 92, 246, 0.3);
+}
+.gradient-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Glow effects ─────────────────────────────────────────────────── */
+.glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+}
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+/* ── Animated background for auth pages ───────────────────────────── */
+.animated-bg {
+  background: linear-gradient(-45deg, #0a0e1a, #1a1040, #0f172a, #0c1a2e);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Dark input styling ───────────────────────────────────────────── */
+.dark-input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+.dark-input:focus {
+  outline: none;
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+}
+.dark-input::placeholder {
+  color: rgba(148, 163, 184, 0.5);
+}
+
+/* ── Dark select styling ──────────────────────────────────────────── */
+.dark-select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+.dark-select:focus {
+  outline: none;
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+.dark-select option {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+/* ── Scrollbar styling ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
